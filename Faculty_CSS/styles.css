@@ -147,18 +147,58 @@ h1 {
 }
 
 
+/* Faculty Information Collection Form Styles */
 
+.info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 400px;
+    margin-top: 30px;
+}
 
+.info-form label {
+    margin-top: 8px;
+    font-weight: bold;
+}
 
+.info-form input,
+.info-form select {
+    padding: 6px 8px;
+    font-size: 14px;
+}
 
+.info-form button {
+    margin-top: 16px;
+    padding: 8px 12px;
+    align-self: flex-start;
+    cursor: pointer;
+}
 
+.biography .info-form {
+    max-width: none;
+    margin-top: 0;
+}
 
+.biography .info-form label {
+    margin-top: 0;
+    font-size: 24px;
+}
 
+.biography textarea {
+    width: 100%;
+    min-height: 140px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+}
 
-
-
-
-
-
-
-
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
