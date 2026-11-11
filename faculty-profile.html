@@ -1,53 +1,72 @@
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Profile - Dawn Ellis</title>
-    <link rel="stylesheet" href="Faculty_CSS//styles.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-content">
-            <p class="school-name">College Faculty Directory</p>
-            <nav>
-                <a href="index.html">Faculty Profiles</a>
-                <a href="faculty-profile.html" aria-current="page">Instructor Profile</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="profile-page">
-        <section class="profile-top">
-            <div class="instructor-photo">Instructor Image</div>
-            <div>
-                <p>Clearwater Campus - College of Computer and Information Technology</p>
-                <h1>Dawn Ellis</h1>
-                <p>Faculty</p>
-                <p>Office: ES 213B</p>
-                <p>Email: <a href="mailto:ellis.dawn@spcollege.edu">ellis.dawn@spcollege.edu</a></p>
-                <p>Phone: (727) 614-7025</p>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Faculty Profile</title>
+        <link rel="stylesheet" href="Faculty_CSS//styles.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-content">
+                <p class="school-name">College Faculty Directory</p>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Faculty Profiles</a>
+                    <a href="faculty-profile.html">Instructor Profile</a>
+                    <a href="faculty-information-collection.html" aria-current="page">Edit Profile</a>
+                </nav>
             </div>
-        </section>
+        </header>
+        <main class="profile-page">
+             <section class="profile-top">
+                <div>
+                    <div class="instructor-photo">Instructor Image</div>
+                    <input type="file" class="photo-upload" id="photo-upload" name="photo-upload" accept="image/*">
+                </div>
+                <div>
+                    <form class="info-form">
+                        <label for="campus">Campus:</label>
+                        <select id="campus" name="campus">
+                            <option value="all-state-center">All State Center</option>
+                            <option value="clearwater">Clearwater</option>
+                            <option value="downtown">Downtown</option>
+                        </select>
+                        <label for="department">Department:</label>
+                        <select id="department" name="department">
+                            <option value="computer-science">Computer Science</option>
+                            <option value="information-technology">Information Technology</option>
+                            <option value="networking">Networking</option>
+                        </select>
+                        <label for="instructor">Instructor:</label>
+                        <input type="text" id="instructor" name="instructor" placeholder="Enter instructor name">
+                        <label for="office">Office:</label>
+                        <input type="text" id="office" name="office" placeholder="Enter office location">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email address">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                        <button type="submit">Update Information</button>
+                    </form>
+                </div>
+            </section>
 
-        <section class="biography">
-            <h2>Biography</h2>
-            <p>
-                Add a brief biography for the instructor here. 
-            </p>
-        </section>
+            <section class="biography">
+                <form class="info-form">
+                    <label for="biography">Biography:</label>
+                    <textarea id="biography" name="biography" placeholder="Enter instructor biography"></textarea>
+                    <button type="submit">Update Biography</button>
+                </form>
+            </section>
 
-        <section class="enrollments">
-            <h2>Enrollments</h2>
-            <ul class="course-list">
-                <li><strong>COP 1000</strong><span>Introduction to Programming</span></li>
-                <li><strong>COP 2000</strong><span>Programming Concepts</span></li>
-                <li><strong>CTS 2001</strong><span>Computer and Network Fundamentals</span></li>
-                <li><strong>CGS 1000</strong><span>Computer Information Systems</span></li>
-            </ul>
-        </section>
-        <p class="back-link"><a href="index.html">← Back to Faculty Profiles</a></p>
-    </main>
-
-    
-</body>
+            <section class="enrollments">
+                <h2>Enrollments</h2>
+                <ul class="course-list">
+                    <li><strong>COP 1000</strong><span>Introduction to Programming</span></li>
+                    <li><strong>COP 2000</strong><span>Programming Concepts</span></li>
+                    <li><strong>CTS 2001</strong><span>Computer and Network Fundamentals</span></li>
+                    <li><strong>CGS 1000</strong><span>Computer Information Systems</span></li>
+                </ul>
+            </section>
+            <p class="back-link"><a href="index.html">← Back to Faculty Profiles</a></p>
+        </main>
+    </body>
 </html>
